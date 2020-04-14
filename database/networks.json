@@ -1,0 +1,33 @@
+[
+    {
+        "id": 0,
+        "name": "sport",
+        "author_id": 1,
+        "chats": [
+            {
+                "id": 0,
+                "messages": [
+                    {
+                        "id": 0,
+                        "author_id": 1,
+                        "content": "message 1"
+                    },
+                    {
+                        "id": 1,
+                        "author_id": 2,
+                        "content": "message 1"
+                    }
+                ]
+            }
+        ],
+        "publications": [
+            {
+                "id": 1,
+                "author_id": 1,
+                "date": "12/04/20",
+                "content": "content",
+                "image_url": "images/publication1.jpg"
+            }
+        ]
+    }
+]

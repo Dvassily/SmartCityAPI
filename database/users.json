@@ -1,0 +1,15 @@
+[
+    {
+        "id" :0 ,  
+        "firstname":"firstname",
+        "lastname":"lastname",
+        "email":"email@mail.com",
+        "password":"password",
+        "dateofbirth":"12/04/2020",
+        "gender":"gender",
+        "address":"rue saint priest",
+        "town":"montpellier",
+        "interests": [1, 2],
+        "services": [0, 1]
+    }
+]

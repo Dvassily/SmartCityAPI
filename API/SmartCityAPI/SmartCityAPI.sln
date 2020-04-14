@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartCityAPI", "SmartCityAPI\SmartCityAPI.csproj", "{B4E872F4-250D-4800-B331-B669C9342E96}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Model", "Model\Model.csproj", "{14FF3E8C-65F9-4B12-87DD-ED2ACEEFD3B5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Protocol", "Protocol\Protocol.csproj", "{511C023B-E462-4D74-A205-94A74EE66E9C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4E872F4-250D-4800-B331-B669C9342E96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4E872F4-250D-4800-B331-B669C9342E96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4E872F4-250D-4800-B331-B669C9342E96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4E872F4-250D-4800-B331-B669C9342E96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14FF3E8C-65F9-4B12-87DD-ED2ACEEFD3B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14FF3E8C-65F9-4B12-87DD-ED2ACEEFD3B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14FF3E8C-65F9-4B12-87DD-ED2ACEEFD3B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14FF3E8C-65F9-4B12-87DD-ED2ACEEFD3B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{511C023B-E462-4D74-A205-94A74EE66E9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{511C023B-E462-4D74-A205-94A74EE66E9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{511C023B-E462-4D74-A205-94A74EE66E9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{511C023B-E462-4D74-A205-94A74EE66E9C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B3D9EBB6-94FF-4701-935F-9E5C05A73333}
+	EndGlobalSection
+EndGlobal

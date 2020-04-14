@@ -1,0 +1,17 @@
+[
+    {
+        "trade_id" : 0,
+        "type" : "image",
+        "url" : "images/advertising1.jpg",
+        "target" : [
+             { "ref" : 0 }, 
+             { "ref" : 2 }
+        ]
+    },
+    {
+        "trade_id" : 0,
+        "type" : "video",
+        "url" : "videos/advertising2.mp4",
+        "target" : [ { "ref" : 1 } ]
+    }
+]

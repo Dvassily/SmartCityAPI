@@ -1,0 +1,8 @@
+C:\Users\dalie\source\repos\SmartCityAPI\Model\bin\Debug\netstandard2.0\Model.deps.json
+C:\Users\dalie\source\repos\SmartCityAPI\Model\bin\Debug\netstandard2.0\Model.dll
+C:\Users\dalie\source\repos\SmartCityAPI\Model\bin\Debug\netstandard2.0\Model.pdb
+C:\Users\dalie\source\repos\SmartCityAPI\Model\obj\Debug\netstandard2.0\Model.csprojAssemblyReference.cache
+C:\Users\dalie\source\repos\SmartCityAPI\Model\obj\Debug\netstandard2.0\Model.AssemblyInfoInputs.cache
+C:\Users\dalie\source\repos\SmartCityAPI\Model\obj\Debug\netstandard2.0\Model.AssemblyInfo.cs
+C:\Users\dalie\source\repos\SmartCityAPI\Model\obj\Debug\netstandard2.0\Model.dll
+C:\Users\dalie\source\repos\SmartCityAPI\Model\obj\Debug\netstandard2.0\Model.pdb

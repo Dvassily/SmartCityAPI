@@ -1,0 +1,25 @@
+[
+	{
+		"id": 0,
+		"name": "category1",
+		"children": [1]
+	},
+	{
+		"id": 1,
+		"name": "type1",
+		"children": []
+	},
+	{
+		"id": 2,
+		"name": "type2",
+		"children": []
+	}, {
+		"id": 3,
+		"name": "subcategory1a",
+		"children": [4]
+	}, {
+		"id": 4,
+		"name": "type3",
+		"children": []
+	}
+]

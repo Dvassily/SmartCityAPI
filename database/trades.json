@@ -1,0 +1,20 @@
+[
+{
+    "id" : 0,
+    "type" : { "ref" : 1 },
+    "nom" : "Trade1Nom",
+    "description" : "Trade1Description",
+    "schedules" : {
+        "lundi" : {"opening" : "08:00:00", "closing" : "18:00:00"},
+        "mardi" : {"opening" : "08:00:00", "closing" : "18:00:00"},
+        "mercredi" : {"opening" : "08:00:00", "closing" : "18:00:00"},
+        "jeudi" : {"opening" : "08:00:00", "closing" : "18:00:00"},
+        "vendredi" : {"opening" : "08:00:00", "closing" : "18:00:00"},
+        "samedi" : {"opening" : "08:00:00", "closing" : "18:00:00"},
+        "dimanche" : { }
+    },
+    "image_url" : "images/logo-trade.jpg",
+    "address" : "Boulevard Ledru-Rollin",
+    "town" : "Montpellier"
+}
+]

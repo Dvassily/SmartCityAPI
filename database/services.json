@@ -1,0 +1,16 @@
+[
+    {
+        "id" : 0,
+        "title" : "Meteo",
+        "image_url" : "images/meteo.jpg",
+        "api_url" : "http://localhost:44318/api/Meteo/",
+        "description" : "Consulter la météo de la semaine"
+    },
+    {
+        "id" : 1,
+        "title" : "Agenda",
+        "image_url" : "images/agenda.jpg",
+        "api_url" : "http://localhost:44318/api/Agenda/",
+        "description" : "Consulter son agenda"
+    }
+]

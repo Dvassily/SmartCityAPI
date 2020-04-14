@@ -1,0 +1,20 @@
+[
+    {
+        "user" : { "ref" : 0 },
+        "tasks" : [
+            {
+                "id" : 0,
+                "title" : "task1title",
+                "description" : "task1description",
+                "date_start" : "2020/05/05 08:00:00Z",
+                "date_end" : "2020/05/05 09:00:00Z"
+            }, {
+                "id" : 1,
+                "title" : "task2title",
+                "description" : "task2description",
+                "date_start" : "2020/05/06 10:30:00Z",
+                "date_end" : "2020/05/05 11:30:00Z"
+            }
+        ]
+    }
+]

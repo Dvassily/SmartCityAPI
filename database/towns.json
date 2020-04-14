@@ -1,0 +1,10 @@
+[
+    {
+        "name" : "Montpellier",
+        "image_url" : "images/montpellier-logo.png"
+    },
+    {
+        "name" : "Arles",
+        "image_url" : "images/arles-logo.png"
+    }
+]

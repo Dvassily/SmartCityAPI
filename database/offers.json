@@ -1,0 +1,9 @@
+[
+{
+	"id" : 0,
+    "trade_id" : 0,
+    "title" : "titreOffre1",
+    "description" : "DescriptionOffre1",
+    "images_url" : [ "images/lampe-de-bureau.jpg" ]
+}
+]
