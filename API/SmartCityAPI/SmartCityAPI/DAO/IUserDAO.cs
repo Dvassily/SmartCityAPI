@@ -17,5 +17,6 @@ namespace SmartCityAPI.DAO
         Task Insert(UserDTO dto);
 
         Task<bool> Update(UserDTO dto);
+        Task<UserDTO> Authentify(string email, string password);
     }
 }

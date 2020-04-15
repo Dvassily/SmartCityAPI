@@ -16,10 +16,12 @@ namespace SmartCityAPI.Controllers
     public class ServiceController : ControllerBase
     {
         private readonly IServiceDAO _serviceDAO;
+        private readonly IUserDAO _userDAO;
 
-        public ServiceController(IServiceDAO serviceDAO)
+        public ServiceController(IServiceDAO serviceDAO, IUserDAO userDAO)
         {
             _serviceDAO = serviceDAO;
+            _userDAO = userDAO;
         }
 
         // GET: api/Actualite
@@ -41,6 +43,27 @@ namespace SmartCityAPI.Controllers
             }
 
             return new ObjectResult(service);
+        }
+
+        // GET: api/Actualite/5
+        [HttpGet("user/{id}", Name = "GetServicesByUserId")]
+        public async Task<ActionResult<List<ServiceDTO>>> GetServicesByUserId(int id)
+        {
+            UserDTO user = await _userDAO.FindById(id);
+
+            if (user == null)
+            {
+                return new NotFoundResult();
+            }
+
+            List<ServiceDTO> services = new List<ServiceDTO>();
+
+            foreach (int serviceId in user.Services)
+            {
+                services.Add(await _serviceDAO.FindById(serviceId));
+            }
+
+            return new ObjectResult(services);
         }
 
         //// POST: api/Actualite

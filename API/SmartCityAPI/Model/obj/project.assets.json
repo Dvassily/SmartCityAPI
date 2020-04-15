@@ -2828,11 +2828,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dalie\\source\\repos\\SmartCityAPI\\Model\\Model.csproj",
+      "projectUniqueName": "C:\\Users\\dalie\\Source\\Repos\\Dvassily\\SmartCityAPI\\API\\SmartCityAPI\\Model\\Model.csproj",
       "projectName": "Model",
-      "projectPath": "C:\\Users\\dalie\\source\\repos\\SmartCityAPI\\Model\\Model.csproj",
+      "projectPath": "C:\\Users\\dalie\\Source\\Repos\\Dvassily\\SmartCityAPI\\API\\SmartCityAPI\\Model\\Model.csproj",
       "packagesPath": "C:\\Users\\dalie\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dalie\\source\\repos\\SmartCityAPI\\Model\\obj\\",
+      "outputPath": "C:\\Users\\dalie\\Source\\Repos\\Dvassily\\SmartCityAPI\\API\\SmartCityAPI\\Model\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

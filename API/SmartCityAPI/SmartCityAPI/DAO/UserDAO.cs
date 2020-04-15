@@ -19,6 +19,23 @@ namespace SmartCityAPI.DAO
             _context = context;
         }
 
+        public async Task<UserDTO> Authentify(string email, string password)
+        {
+            FilterDefinition<User> filters = Builders<User>.Filter.Eq(u => u.Email, email);
+            filters &= Builders<User>.Filter.Eq(u => u.Password, password);
+
+            User User = await _context.Users
+                .Find(filters)
+                .FirstOrDefaultAsync();
+
+            if (User == null)
+            {
+                return null;
+            }
+
+            return UserDTO.FromUser(User);
+        }
+
         public async Task<IEnumerable<UserDTO>> FindAll()
         {
             IEnumerable<User> Users = await _context.Users.Find(_ => true).ToListAsync();
@@ -35,7 +52,7 @@ namespace SmartCityAPI.DAO
         public async Task<UserDTO> FindById(int id)
         {
             User User = await _context.Users
-                .Find(Builders<User>.Filter.Eq(s => s.Id, id))
+                .Find(Builders<User>.Filter.Eq(u => u.Id, id))
                 .FirstOrDefaultAsync();
 
             if (User == null)

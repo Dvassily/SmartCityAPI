@@ -9,7 +9,7 @@ namespace Model.DTO
     {
         public int Id { get; set; }
 
-        public string Title { get; set; }
+        public string Name { get; set; }
 
         public string ImageUrl { get; set; }
 
@@ -21,7 +21,7 @@ namespace Model.DTO
             => new ServiceDTO
             {
                 Id = service.Id,
-                Title = service.Title,
+                Name = service.Name,
                 ImageUrl = service.ImageUrl,
                 APIUrl = service.APIUrl,
                 Description = service.Description

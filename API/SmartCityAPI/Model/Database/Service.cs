@@ -12,8 +12,8 @@ namespace Model.Database
         [BsonElement("id")]
         public int Id { get; set; }
 
-        [BsonElement("title")]
-        public string Title { get; set; }
+        [BsonElement("name")]
+        public string Name { get; set; }
 
         [BsonElement("image_url")]
         public string ImageUrl { get; set; }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dalie\\source\\repos\\SmartCityAPI\\SmartCityAPI\\SmartCityAPI.csproj": {}
+    "C:\\Users\\dalie\\Source\\Repos\\Dvassily\\SmartCityAPI\\API\\SmartCityAPI\\SmartCityAPI\\SmartCityAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dalie\\source\\repos\\SmartCityAPI\\Model\\Model.csproj": {
+    "C:\\Users\\dalie\\Source\\Repos\\Dvassily\\SmartCityAPI\\API\\SmartCityAPI\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dalie\\source\\repos\\SmartCityAPI\\Model\\Model.csproj",
+        "projectUniqueName": "C:\\Users\\dalie\\Source\\Repos\\Dvassily\\SmartCityAPI\\API\\SmartCityAPI\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "C:\\Users\\dalie\\source\\repos\\SmartCityAPI\\Model\\Model.csproj",
+        "projectPath": "C:\\Users\\dalie\\Source\\Repos\\Dvassily\\SmartCityAPI\\API\\SmartCityAPI\\Model\\Model.csproj",
         "packagesPath": "C:\\Users\\dalie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dalie\\source\\repos\\SmartCityAPI\\Model\\obj\\",
+        "outputPath": "C:\\Users\\dalie\\Source\\Repos\\Dvassily\\SmartCityAPI\\API\\SmartCityAPI\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -70,14 +70,14 @@
         }
       }
     },
-    "C:\\Users\\dalie\\source\\repos\\SmartCityAPI\\SmartCityAPI\\SmartCityAPI.csproj": {
+    "C:\\Users\\dalie\\Source\\Repos\\Dvassily\\SmartCityAPI\\API\\SmartCityAPI\\SmartCityAPI\\SmartCityAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dalie\\source\\repos\\SmartCityAPI\\SmartCityAPI\\SmartCityAPI.csproj",
+        "projectUniqueName": "C:\\Users\\dalie\\Source\\Repos\\Dvassily\\SmartCityAPI\\API\\SmartCityAPI\\SmartCityAPI\\SmartCityAPI.csproj",
         "projectName": "SmartCityAPI",
-        "projectPath": "C:\\Users\\dalie\\source\\repos\\SmartCityAPI\\SmartCityAPI\\SmartCityAPI.csproj",
+        "projectPath": "C:\\Users\\dalie\\Source\\Repos\\Dvassily\\SmartCityAPI\\API\\SmartCityAPI\\SmartCityAPI\\SmartCityAPI.csproj",
         "packagesPath": "C:\\Users\\dalie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dalie\\source\\repos\\SmartCityAPI\\SmartCityAPI\\obj\\",
+        "outputPath": "C:\\Users\\dalie\\Source\\Repos\\Dvassily\\SmartCityAPI\\API\\SmartCityAPI\\SmartCityAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -96,8 +96,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\dalie\\source\\repos\\SmartCityAPI\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\dalie\\source\\repos\\SmartCityAPI\\Model\\Model.csproj"
+              "C:\\Users\\dalie\\Source\\Repos\\Dvassily\\SmartCityAPI\\API\\SmartCityAPI\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\dalie\\Source\\Repos\\Dvassily\\SmartCityAPI\\API\\SmartCityAPI\\Model\\Model.csproj"
               }
             }
           }
