@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using SmartCityAPI.DAO;
 using SmartCityAPI.Datas;
 
@@ -32,6 +33,8 @@ namespace SmartCityAPI
             services.AddTransient<IUserDAO, UserDAO>();
             services.AddTransient<IInterestContext, InterestContext>();
             services.AddTransient<IInterestDAO, InterestDAO>();
+            services.AddTransient<INetworkContext, NetworkContext>();
+            services.AddTransient<INetworkDAO, NetworkDAO>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

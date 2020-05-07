@@ -99,3 +99,7 @@ C:\Users\dalie\Source\Repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\
 C:\Users\dalie\Source\Repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\obj\Test\netcoreapp3.1\SmartCityAPI.dll
 C:\Users\dalie\Source\Repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\obj\Test\netcoreapp3.1\SmartCityAPI.pdb
 C:\Users\dalie\Source\Repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\obj\Test\netcoreapp3.1\SmartCityAPI.genruntimeconfig.cache
+C:\Users\dalie\Source\Repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\bin\Test\netcoreapp3.1\Microsoft.Azure.KeyVault.Core.dll
+C:\Users\dalie\Source\Repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\bin\Test\netcoreapp3.1\Microsoft.Azure.Storage.Blob.dll
+C:\Users\dalie\Source\Repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\bin\Test\netcoreapp3.1\Microsoft.Azure.Storage.Common.dll
+C:\Users\dalie\Source\Repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\bin\Test\netcoreapp3.1\Microsoft.WindowsAzure.Storage.dll

@@ -44,7 +44,7 @@ namespace SmartCityAPI.Controllers
         // POST: api/User
         [HttpPost]
         public async Task<ActionResult> Post([FromBody] UserDTO user)
-        {   
+        {
             await _userDAO.Insert(user);
 
             return new OkObjectResult(user);
