@@ -16,8 +16,5 @@ namespace Model.Database
 
         [BsonElement("name")]
         public string Name { get; set; }
-
-        [BsonElement("children")]
-        public List<int> Children { get; set; }
     }
 }

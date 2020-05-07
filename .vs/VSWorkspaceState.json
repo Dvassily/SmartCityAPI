@@ -2,7 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\API",
-    "\\API\\SmartCityAPI"
+    "\\API\\SmartCityAPI",
+    "\\API\\SmartCityAPI\\SmartCityAPI",
+    "\\API\\SmartCityAPI\\SmartCityAPI\\Controllers"
   ],
   "SelectedNode": "\\API\\SmartCityAPI\\SmartCityAPI.sln",
   "PreviewInSolutionExplorer": false
