@@ -66,8 +66,6 @@ namespace SmartCityAPI.DAO
         public async Task Insert(UserDTO dto)
         {
             User user = User.FromDTO(dto);
-            user.Id = (await FindAll()).Count();
-
 
             await _context.Users.InsertOneAsync(user);
         }

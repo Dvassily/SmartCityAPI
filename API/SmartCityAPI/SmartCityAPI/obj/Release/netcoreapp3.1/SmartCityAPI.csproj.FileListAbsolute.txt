@@ -108,3 +108,11 @@ C:\Users\dalie\Source\Repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\
 C:\Users\dalie\Source\Repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\bin\Release\netcoreapp3.1\Microsoft.WindowsAzure.Storage.dll
 C:\Users\dalie\Source\Repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\bin\Release\netcoreapp3.1\Protocol.dll
 C:\Users\dalie\Source\Repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\bin\Release\netcoreapp3.1\Protocol.pdb
+C:\Users\dalie\Source\Repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\bin\Release\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\dalie\Source\Repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\bin\Release\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\dalie\Source\Repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\bin\Release\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\dalie\Source\Repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\bin\Release\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\dalie\Source\Repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\bin\Release\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\dalie\Source\Repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\bin\Release\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\dalie\Source\Repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\bin\Release\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\dalie\Source\Repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\bin\Release\netcoreapp3.1\Microsoft.Extensions.Options.dll

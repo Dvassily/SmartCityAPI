@@ -55,6 +55,7 @@ namespace SmartCityAPI.Controllers
             var storageConnectionString = _configuration["ConnectionStrings:AzureStorageConnectionString"];
             System.Diagnostics.Trace.WriteLine("request : ");
             System.Diagnostics.Trace.WriteLine(imageFile == null);
+            System.Diagnostics.Trace.WriteLine("id : " + request.AuthorId);
             if (CloudStorageAccount.TryParse(storageConnectionString, out CloudStorageAccount storageAccount))
             {
                 CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
@@ -74,9 +75,9 @@ namespace SmartCityAPI.Controllers
 
                 string uri = blob.Uri.ToString();
 
-
                 NetworkDTO network = new NetworkDTO
                 {
+                    Id = (await _networkDAO.FindAll()).Count(),
                     Name = request.Name,
                     Description = request.Description,
                     AuthorId = request.AuthorId,
