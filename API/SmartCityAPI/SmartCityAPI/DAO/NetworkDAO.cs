@@ -54,7 +54,6 @@ namespace SmartCityAPI.DAO
         public async Task Insert(NetworkDTO dto)
         {
             Network network = Network.FromDTO(dto);
-            network.Id = (await FindAll()).Count();
 
             await _context.Networks.InsertOneAsync(network);
         }

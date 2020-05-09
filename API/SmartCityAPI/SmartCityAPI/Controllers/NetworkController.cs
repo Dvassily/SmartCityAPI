@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Storage;
 using Microsoft.Azure.Storage.Blob;
 using Microsoft.Extensions.Configuration;
+using Model.Database;
 using Model.DTO;
 using Protocol;
 using SmartCityAPI.DAO;
@@ -19,11 +20,15 @@ namespace SmartCityAPI.Controllers
     {
         private IConfiguration _configuration;
         private INetworkDAO _networkDAO;
+        private IPublicationDAO _publicationDAO;
+        private IUserDAO _userDAO;
 
-        public NetworkController(INetworkDAO networkDAO, IConfiguration configuration)
+        public NetworkController(INetworkDAO networkDAO, IPublicationDAO publicationDAO, IUserDAO userDAO, IConfiguration configuration)
         {
             _configuration = configuration;
             _networkDAO = networkDAO;
+            _publicationDAO = publicationDAO;
+            _userDAO = userDAO;
         }
 
         // GET: api/Network
@@ -35,7 +40,7 @@ namespace SmartCityAPI.Controllers
 
         // GET: api/Network/5
         [HttpGet("{id}", Name = "Get")]
-        public async Task<IActionResult> GetAsync(int id)
+        public async Task<IActionResult> GetNetworkAsync(int id)
         {
             NetworkDTO user = await _networkDAO.FindById(id);
 
@@ -49,13 +54,10 @@ namespace SmartCityAPI.Controllers
 
         // POST: api/Network
         [HttpPost]
-        public async Task<IActionResult> PostAsync([FromForm(Name = "image")] IFormFile imageFile, [FromForm] PostNetworkRequest request)
+        public async Task<IActionResult> InsertNetwork([FromForm(Name = "image")] IFormFile imageFile, [FromForm] PostNetworkRequest request)
         {
-            System.Diagnostics.Trace.WriteLine("FOOOO");
             var storageConnectionString = _configuration["ConnectionStrings:AzureStorageConnectionString"];
-            System.Diagnostics.Trace.WriteLine("request : ");
-            System.Diagnostics.Trace.WriteLine(imageFile == null);
-            System.Diagnostics.Trace.WriteLine("id : " + request.AuthorId);
+
             if (CloudStorageAccount.TryParse(storageConnectionString, out CloudStorageAccount storageAccount))
             {
                 CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
@@ -90,6 +92,32 @@ namespace SmartCityAPI.Controllers
             }
 
             return new StatusCodeResult(StatusCodes.Status500InternalServerError);
+        }
+
+        // POST: api/Network/5/publications
+        [HttpPost("{id}/publications")]
+        public async Task<IActionResult> InsertPublication([FromBody] PublicationDTO publication, int id)
+        {
+            publication.NetworkId = id;
+
+            PublicationDTO insertedPublication = await _publicationDAO.Insert(publication);
+
+            return new OkObjectResult(insertedPublication);
+        }
+
+        // GET: api/Network/5/publications
+        [HttpGet("{id}/publications", Name ="GetNetworkPublications")]
+        public async Task<IActionResult> GetPublicationsAsync(int id)
+        {
+            IEnumerable<PublicationDTO> publications = await _publicationDAO.FindByNetworkId(id);
+
+            foreach (PublicationDTO publication in publications)
+            {
+                UserDTO user = await _userDAO.FindById(publication.AuthorId);
+                publication.AuthorName = user.FirstName + " " + user.LastName;
+            }
+
+            return new ObjectResult(publications);
         }
     }
 }

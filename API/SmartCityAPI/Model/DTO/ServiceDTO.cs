@@ -17,6 +17,8 @@ namespace Model.DTO
 
         public string Description { get; set; }
 
+        public string ServiceType { get; set; }
+
         public static ServiceDTO FromService(Service service)
             => new ServiceDTO
             {
@@ -24,7 +26,8 @@ namespace Model.DTO
                 Name = service.Name,
                 ImageUrl = service.ImageUrl,
                 APIUrl = service.APIUrl,
-                Description = service.Description
+                Description = service.Description,
+                ServiceType = service.ServiceType
             };
     }
 }

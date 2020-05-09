@@ -23,5 +23,8 @@ namespace Model.Database
 
         [BsonElement("description")]
         public string Description { get; set; }
+
+        [BsonElement("service_type")]
+        public string ServiceType { get; set; }
     }
 }
