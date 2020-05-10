@@ -2,7 +2,6 @@ C:\Users\dalie\Source\Repos\Dvassily\SmartCityAPI\API\SmartCityAPI\Protocol\bin\
 C:\Users\dalie\Source\Repos\Dvassily\SmartCityAPI\API\SmartCityAPI\Protocol\bin\Debug\netstandard2.0\Protocol.dll
 C:\Users\dalie\Source\Repos\Dvassily\SmartCityAPI\API\SmartCityAPI\Protocol\bin\Debug\netstandard2.0\Protocol.pdb
 C:\Users\dalie\Source\Repos\Dvassily\SmartCityAPI\API\SmartCityAPI\Protocol\obj\Debug\netstandard2.0\Protocol.csprojAssemblyReference.cache
-C:\Users\dalie\Source\Repos\Dvassily\SmartCityAPI\API\SmartCityAPI\Protocol\obj\Debug\netstandard2.0\Protocol.csproj.CoreCompileInputs.cache
 C:\Users\dalie\Source\Repos\Dvassily\SmartCityAPI\API\SmartCityAPI\Protocol\obj\Debug\netstandard2.0\Protocol.AssemblyInfoInputs.cache
 C:\Users\dalie\Source\Repos\Dvassily\SmartCityAPI\API\SmartCityAPI\Protocol\obj\Debug\netstandard2.0\Protocol.AssemblyInfo.cs
 C:\Users\dalie\Source\Repos\Dvassily\SmartCityAPI\API\SmartCityAPI\Protocol\obj\Debug\netstandard2.0\Protocol.dll

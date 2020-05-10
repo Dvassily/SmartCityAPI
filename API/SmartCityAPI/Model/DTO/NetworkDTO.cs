@@ -23,6 +23,9 @@ namespace Model.DTO
         [JsonProperty("image_url")]
         public string ImageUrl { get; set; }
 
+        [JsonProperty("subscriptions")]
+        public IEnumerable<SubscriptionDTO> subscriptions { get; set; } = new List<SubscriptionDTO>();
+
         public static NetworkDTO FromNetwork(Network network)
             => new NetworkDTO
         {

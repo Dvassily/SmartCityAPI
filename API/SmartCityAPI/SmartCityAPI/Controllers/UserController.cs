@@ -14,20 +14,24 @@ namespace SmartCityAPI.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserDAO _userDAO;
+        private readonly ISubscriptionDAO _subscriptionDAO;
+        private readonly INetworkDAO _networkDAO;
 
-        public UserController(IUserDAO userDAO)
+        public UserController(IUserDAO userDAO, ISubscriptionDAO subscriptionDAO, INetworkDAO networkDAO)
         {
             _userDAO = userDAO;
+            _subscriptionDAO = subscriptionDAO;
+            _networkDAO = networkDAO;
         }
 
-        // GET: api/User
+        // GET: api/users
         [HttpGet]
         public async Task<ActionResult<IEnumerable<UserDTO>>> GetUsers()
         {
             return new ObjectResult(await _userDAO.FindAll());
         }
 
-        // GET: api/User/5
+        // GET: api/users/5
         [HttpGet("{id}", Name = "GetUser")]
         public async Task<ActionResult<UserDTO>> GetUser(int id)
         {
@@ -54,9 +58,26 @@ namespace SmartCityAPI.Controllers
         [HttpPut("{id}")]
         public async Task<ActionResult> Put(int id, [FromBody] UserDTO user)
         {
+            // TODO : Throw error if id is different of user's id
             await _userDAO.Update(user);
 
             return new OkObjectResult(user);
+        }
+
+
+        // GET: api/users/5/networks
+        [HttpGet("{id}/networks", Name = "GetSubscribedNetworks")]
+        public async Task<ActionResult<NetworkDTO>> GetSubscribedNetworks(int id)
+        {
+            List<SubscriptionDTO> subscriptions = await _subscriptionDAO.findByUserIdAsync(id);
+            List<NetworkDTO> networks = new List<NetworkDTO>();
+
+            foreach (SubscriptionDTO subscription in subscriptions)
+            {
+                networks.Add(await _networkDAO.FindById(subscription.Id));
+            }
+
+            return new OkObjectResult(networks);
         }
 
         //// DELETE: api/ApiWithActions/5

@@ -22,20 +22,37 @@ namespace SmartCityAPI.Controllers
         private INetworkDAO _networkDAO;
         private IPublicationDAO _publicationDAO;
         private IUserDAO _userDAO;
+        private ISubscriptionDAO _subscriptionDAO;
 
-        public NetworkController(INetworkDAO networkDAO, IPublicationDAO publicationDAO, IUserDAO userDAO, IConfiguration configuration)
+        public NetworkController(INetworkDAO networkDAO, IPublicationDAO publicationDAO, IUserDAO userDAO, ISubscriptionDAO subscriptionDAO, IConfiguration configuration)
         {
             _configuration = configuration;
             _networkDAO = networkDAO;
             _publicationDAO = publicationDAO;
             _userDAO = userDAO;
+            _subscriptionDAO = subscriptionDAO;
         }
 
         // GET: api/Network
         [HttpGet]
         public async Task<IActionResult> GetNetworksAsync()
         {
-            return new ObjectResult(await _networkDAO.FindAll());
+            IEnumerable<NetworkDTO> networks = await _networkDAO.FindAll();
+
+            foreach (NetworkDTO network in networks)
+            {
+                IEnumerable<SubscriptionDTO> subscriptions = await _subscriptionDAO.findByNetworkIdAsync(network.Id);
+                
+                foreach (SubscriptionDTO subscription in subscriptions)
+                {
+                    UserDTO user = await _userDAO.FindById(subscription.UserId);
+                    subscription.UserName = user.FirstName + " " + user.LastName;
+                }
+
+                network.subscriptions = subscriptions;
+            }
+
+            return new OkObjectResult(networks);
         }
 
         // GET: api/Network/5
@@ -118,6 +135,35 @@ namespace SmartCityAPI.Controllers
             }
 
             return new ObjectResult(publications);
+        }
+
+        // POST: api/Network/5/subscribe
+        [HttpPost("{id}/subscriptions")]
+        public async Task<IActionResult> Subscribe([FromBody] SubscriptionDTO subscription, int id)
+        {
+            subscription.NetworkId = id;
+
+            SubscriptionDTO insertedPublication = await _subscriptionDAO.insertAsync(subscription);
+
+            return new OkObjectResult(insertedPublication);
+        }
+
+                // POST: api/Network/5/subscribe
+        [HttpPut("{id}/subscriptions/{subscriptionId}")]
+        public async Task<IActionResult> UpdateSubscription([FromBody] SubscriptionDTO subscription, int id, int subscriptionId)
+        {
+            subscription.Id = subscriptionId;
+            subscription.NetworkId = id;
+
+            // TODO : Throw error if id is different of user's id
+            bool result = await _subscriptionDAO.Update(subscription);
+
+            if (! result)
+            {
+                return new StatusCodeResult(StatusCodes.Status500InternalServerError);
+            }
+
+            return new OkObjectResult(subscription);
         }
     }
 }
