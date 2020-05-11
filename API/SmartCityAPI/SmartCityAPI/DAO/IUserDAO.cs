@@ -14,7 +14,7 @@ namespace SmartCityAPI.DAO
 
         Task<UserDTO> FindById(int id);
 
-        Task Insert(UserDTO dto);
+        Task<UserDTO> Insert(UserDTO dto);
 
         Task<bool> Update(UserDTO dto);
         Task<UserDTO> Authentify(string email, string password);

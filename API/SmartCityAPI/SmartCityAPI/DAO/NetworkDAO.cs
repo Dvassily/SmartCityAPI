@@ -17,11 +17,13 @@ namespace SmartCityAPI.DAO
 {
     public class NetworkDAO : INetworkDAO
     {
-        private readonly INetworkContext _context;
+        private readonly INetworkContext _context; 
+        private readonly ICounterDAO _counterDAO;
 
-        public NetworkDAO(INetworkContext context)
+        public NetworkDAO(INetworkContext context, ICounterDAO counterDAO)
         {
             _context = context;
+            _counterDAO = counterDAO;
         }
 
         public async Task<IEnumerable<NetworkDTO>> FindAll()
@@ -51,11 +53,18 @@ namespace SmartCityAPI.DAO
             return NetworkDTO.FromNetwork(network);
         }
 
-        public async Task Insert(NetworkDTO dto)
+        public async Task<NetworkDTO> Insert(NetworkDTO dto)
         {
+            Counter counter = await _counterDAO.GetCountersAsync();
+            int id = counter.Networks++;
+            await _counterDAO.UpdateCountersAsync(counter);
+
             Network network = Network.FromDTO(dto);
+            network.Id = id;
 
             await _context.Networks.InsertOneAsync(network);
+
+            return NetworkDTO.FromNetwork(network);
         }
     }
 }

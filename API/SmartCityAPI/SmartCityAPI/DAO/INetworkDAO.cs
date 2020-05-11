@@ -13,6 +13,6 @@ namespace SmartCityAPI.DAO
 
         Task<NetworkDTO> FindById(int id);
 
-        Task Insert(NetworkDTO network);
+        Task<NetworkDTO> Insert(NetworkDTO network);
     }
 }

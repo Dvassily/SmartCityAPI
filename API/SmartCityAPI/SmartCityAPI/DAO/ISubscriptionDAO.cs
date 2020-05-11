@@ -13,5 +13,6 @@ namespace SmartCityAPI.DAO
         Task<List<SubscriptionDTO>> findByUserIdAsync(int userId);
         Task<SubscriptionDTO> insertAsync(SubscriptionDTO dto);
         Task<bool> Update(SubscriptionDTO subscription);
+        Task DeleteAsync(int subscriptionId);
     }
 }

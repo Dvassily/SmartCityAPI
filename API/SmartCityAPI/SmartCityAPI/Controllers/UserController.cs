@@ -31,7 +31,7 @@ namespace SmartCityAPI.Controllers
             return new ObjectResult(await _userDAO.FindAll());
         }
 
-        // GET: api/users/5
+        // GET:     
         [HttpGet("{id}", Name = "GetUser")]
         public async Task<ActionResult<UserDTO>> GetUser(int id)
         {
@@ -49,9 +49,9 @@ namespace SmartCityAPI.Controllers
         [HttpPost]
         public async Task<ActionResult> Post([FromBody] UserDTO user)
         {
-            await _userDAO.Insert(user);
+            UserDTO insertedUser = await _userDAO.Insert(user);
 
-            return new OkObjectResult(user);
+            return new OkObjectResult(insertedUser);
         }
 
         // PUT: api/User/5

@@ -96,16 +96,15 @@ namespace SmartCityAPI.Controllers
 
                 NetworkDTO network = new NetworkDTO
                 {
-                    Id = (await _networkDAO.FindAll()).Count(),
                     Name = request.Name,
                     Description = request.Description,
                     AuthorId = request.AuthorId,
                     ImageUrl = uri
                 };
 
-                await _networkDAO.Insert(network);
+                NetworkDTO insertedNetwork = await _networkDAO.Insert(network);
 
-                return new OkObjectResult(network);
+                return new OkObjectResult(insertedNetwork);
             }
 
             return new StatusCodeResult(StatusCodes.Status500InternalServerError);
@@ -164,6 +163,33 @@ namespace SmartCityAPI.Controllers
             }
 
             return new OkObjectResult(subscription);
+        }
+
+        [HttpDelete("{id}/subscriptions/{subscriptionId}")]
+        public async Task<IActionResult> RemoveSubscriptionAsync(int id, int subscriptionId)
+        {
+            List<SubscriptionDTO> subscriptions = await _subscriptionDAO.findByNetworkIdAsync(id);
+
+            SubscriptionDTO subscription = null;
+
+            System.Diagnostics.Trace.WriteLine("bar : " + id + " / " + subscriptionId);
+            foreach (SubscriptionDTO s in subscriptions)
+            {
+                System.Diagnostics.Trace.WriteLine("foo : " + s.Id);
+                if (s.Id == subscriptionId)
+                {
+                    subscription = s;
+                }
+            }
+
+            if (subscription == null)
+            {
+                return NotFound();
+            }
+
+            _subscriptionDAO.DeleteAsync(subscriptionId);
+
+            return NoContent();
         }
     }
 }

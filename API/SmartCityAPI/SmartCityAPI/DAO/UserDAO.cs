@@ -13,10 +13,12 @@ namespace SmartCityAPI.DAO
     public class UserDAO : IUserDAO
     {
         private readonly IUserContext _context;
+        private readonly ICounterDAO _counterDAO;
 
-        public UserDAO(IUserContext context)
+        public UserDAO(IUserContext context, ICounterDAO counterDAO)
         {
             _context = context;
+            this._counterDAO = counterDAO;
         }
 
         public async Task<UserDTO> Authentify(string email, string password)
@@ -63,11 +65,18 @@ namespace SmartCityAPI.DAO
             return UserDTO.FromUser(User);
         }
 
-        public async Task Insert(UserDTO dto)
+        public async Task<UserDTO> Insert(UserDTO dto)
         {
+            Counter counter = await _counterDAO.GetCountersAsync();
+            int id = counter.Users++;
+            await _counterDAO.UpdateCountersAsync(counter);
+
             User user = User.FromDTO(dto);
+            user.Id = id;
 
             await _context.Users.InsertOneAsync(user);
+
+            return UserDTO.FromUser(user);
         }
 
         public async Task<bool> Update(UserDTO dto)

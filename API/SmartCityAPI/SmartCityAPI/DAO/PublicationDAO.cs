@@ -12,10 +12,12 @@ namespace SmartCityAPI.DAO
     public class PublicationDAO : IPublicationDAO
     {
         private readonly IPublicationContext _context;
+        private readonly ICounterDAO _counterDAO;
 
-        public PublicationDAO(IPublicationContext context)
+        public PublicationDAO(IPublicationContext context, ICounterDAO counterDAO)
         {
             _context = context;
+            this._counterDAO = counterDAO;
         }
 
         public async Task<IEnumerable<PublicationDTO>> FindAll()
@@ -63,8 +65,12 @@ namespace SmartCityAPI.DAO
 
         public async Task<PublicationDTO> Insert(PublicationDTO dto)
         {
+            Counter counter = await _counterDAO.GetCountersAsync();
+            int id = counter.Publications++;
+            await _counterDAO.UpdateCountersAsync(counter);
+
             Publication publication = Publication.FromDTO(dto);
-            publication.Id = (await FindAll()).Count();
+            publication.Id = id;
 
             await _context.Publications.InsertOneAsync(publication);
 

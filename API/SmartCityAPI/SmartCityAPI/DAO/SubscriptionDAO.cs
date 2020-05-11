@@ -12,10 +12,12 @@ namespace SmartCityAPI.DAO
     public class SubscriptionDAO : ISubscriptionDAO
     {
         private readonly ISubscriptionContext _context;
+        private readonly ICounterDAO _counterDAO;
 
-        public SubscriptionDAO(ISubscriptionContext context)
+        public SubscriptionDAO(ISubscriptionContext context, ICounterDAO counterDAO)
         {
             _context = context;
+            _counterDAO = counterDAO;
         }
 
         public async Task<List<SubscriptionDTO>> findAllAsync()
@@ -61,8 +63,12 @@ namespace SmartCityAPI.DAO
 
         public async Task<SubscriptionDTO> insertAsync(SubscriptionDTO dto)
         {
+            Counter counter = await _counterDAO.GetCountersAsync();
+            int id = counter.Subscriptions++;
+            await _counterDAO.UpdateCountersAsync(counter);
+
             Subscription subscription = Subscription.FromDTO(dto);
-            subscription.Id = (await findAllAsync()).Count();
+            subscription.Id = id;
 
             await _context.Subscriptions.InsertOneAsync(subscription);
 
@@ -81,6 +87,12 @@ namespace SmartCityAPI.DAO
             ReplaceOneResult result = await _context.Subscriptions.ReplaceOneAsync(filter: u => u.Id == subscription.Id, replacement: subscription);
 
             return result.IsAcknowledged && result.ModifiedCount > 0;
+        }
+
+
+        public async Task DeleteAsync(int subscriptionId)
+        {
+            await _context.Subscriptions.DeleteOneAsync(s => s.Id == subscriptionId);
         }
     }
 }
