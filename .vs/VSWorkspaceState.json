@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\API",
+    "\\API\\SmartCityAPI",
+    "\\API\\SmartCityAPI\\SmartCityAPI",
+    "\\API\\SmartCityAPI\\SmartCityAPI\\DAO"
   ],
+  "SelectedNode": "\\API\\SmartCityAPI\\SmartCityAPI.sln",
   "PreviewInSolutionExplorer": false
 }

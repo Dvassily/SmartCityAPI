@@ -19,11 +19,15 @@ namespace SmartCityAPI.DAO
     {
         private readonly INetworkContext _context; 
         private readonly ICounterDAO _counterDAO;
+        private readonly ISubscriptionDAO _subscriptionDAO;
+        private readonly IUserDAO _userDAO;
 
-        public NetworkDAO(INetworkContext context, ICounterDAO counterDAO)
+        public NetworkDAO(INetworkContext context, ICounterDAO counterDAO, ISubscriptionDAO subscriptionDAO, IUserDAO userDAO)
         {
             _context = context;
             _counterDAO = counterDAO;
+            _subscriptionDAO = subscriptionDAO;
+            _userDAO = userDAO;
         }
 
         public async Task<IEnumerable<NetworkDTO>> FindAll()
@@ -33,7 +37,9 @@ namespace SmartCityAPI.DAO
 
             foreach (Network network in networks)
             {
-                result.Add(NetworkDTO.FromNetwork(network));
+                NetworkDTO dto = NetworkDTO.FromNetwork(network);
+                dto = await joinWithSubscriptionAsync(dto);
+                result.Add(dto);
             }
 
             return result;
@@ -50,7 +56,9 @@ namespace SmartCityAPI.DAO
                 return null;
             }
 
-            return NetworkDTO.FromNetwork(network);
+            NetworkDTO dto = NetworkDTO.FromNetwork(network);
+            dto = await joinWithSubscriptionAsync(dto);
+            return dto;
         }
 
         public async Task<NetworkDTO> Insert(NetworkDTO dto)
@@ -65,6 +73,21 @@ namespace SmartCityAPI.DAO
             await _context.Networks.InsertOneAsync(network);
 
             return NetworkDTO.FromNetwork(network);
+        }
+
+        private async Task<NetworkDTO> joinWithSubscriptionAsync(NetworkDTO dto)
+        {
+            IEnumerable<SubscriptionDTO> subscriptions = await _subscriptionDAO.findByNetworkIdAsync(dto.Id);
+
+            foreach (SubscriptionDTO subscription in subscriptions)
+            {
+                UserDTO user = await _userDAO.FindById(subscription.UserId);
+                subscription.UserName = user.FirstName + " " + user.LastName;
+            }
+
+            dto.subscriptions = subscriptions;
+
+            return dto;
         }
     }
 }

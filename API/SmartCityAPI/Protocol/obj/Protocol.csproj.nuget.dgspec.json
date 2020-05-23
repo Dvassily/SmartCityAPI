@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dalie\\Source\\Repos\\Dvassily\\SmartCityAPI\\API\\SmartCityAPI\\Protocol\\Protocol.csproj": {}
+    "C:\\Users\\dalie\\source\\repos\\Dvassily\\SmartCityAPI\\API\\SmartCityAPI\\Protocol\\Protocol.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dalie\\Source\\Repos\\Dvassily\\SmartCityAPI\\API\\SmartCityAPI\\Protocol\\Protocol.csproj": {
+    "C:\\Users\\dalie\\source\\repos\\Dvassily\\SmartCityAPI\\API\\SmartCityAPI\\Protocol\\Protocol.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dalie\\Source\\Repos\\Dvassily\\SmartCityAPI\\API\\SmartCityAPI\\Protocol\\Protocol.csproj",
+        "projectUniqueName": "C:\\Users\\dalie\\source\\repos\\Dvassily\\SmartCityAPI\\API\\SmartCityAPI\\Protocol\\Protocol.csproj",
         "projectName": "Protocol",
-        "projectPath": "C:\\Users\\dalie\\Source\\Repos\\Dvassily\\SmartCityAPI\\API\\SmartCityAPI\\Protocol\\Protocol.csproj",
+        "projectPath": "C:\\Users\\dalie\\source\\repos\\Dvassily\\SmartCityAPI\\API\\SmartCityAPI\\Protocol\\Protocol.csproj",
         "packagesPath": "C:\\Users\\dalie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dalie\\Source\\Repos\\Dvassily\\SmartCityAPI\\API\\SmartCityAPI\\Protocol\\obj\\",
+        "outputPath": "C:\\Users\\dalie\\source\\repos\\Dvassily\\SmartCityAPI\\API\\SmartCityAPI\\Protocol\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

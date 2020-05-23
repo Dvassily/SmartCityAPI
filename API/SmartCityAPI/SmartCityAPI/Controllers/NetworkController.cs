@@ -39,19 +39,6 @@ namespace SmartCityAPI.Controllers
         {
             IEnumerable<NetworkDTO> networks = await _networkDAO.FindAll();
 
-            foreach (NetworkDTO network in networks)
-            {
-                IEnumerable<SubscriptionDTO> subscriptions = await _subscriptionDAO.findByNetworkIdAsync(network.Id);
-                
-                foreach (SubscriptionDTO subscription in subscriptions)
-                {
-                    UserDTO user = await _userDAO.FindById(subscription.UserId);
-                    subscription.UserName = user.FirstName + " " + user.LastName;
-                }
-
-                network.subscriptions = subscriptions;
-            }
-
             return new OkObjectResult(networks);
         }
 
