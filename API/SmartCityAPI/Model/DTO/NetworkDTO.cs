@@ -26,6 +26,9 @@ namespace Model.DTO
         [JsonProperty("subscriptions")]
         public IEnumerable<SubscriptionDTO> subscriptions { get; set; } = new List<SubscriptionDTO>();
 
+        [JsonProperty("private")]
+        public bool Private { get; set; }
+
         public static NetworkDTO FromNetwork(Network network)
             => new NetworkDTO
         {
@@ -34,6 +37,7 @@ namespace Model.DTO
             Name = network.Name,
             Description = network.Description,
             ImageUrl = network.ImageUrl,
+            Private = network.Private
         };
     }
 }

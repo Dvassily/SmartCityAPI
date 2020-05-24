@@ -27,6 +27,9 @@ namespace Model.Database
         [BsonElement("image_url")]
         public string ImageUrl { get; set; }
 
+        [BsonElement("private")]
+        public bool Private { get; set; }
+
         public static Network FromDTO(NetworkDTO dto)
         {
             return new Network
@@ -35,7 +38,8 @@ namespace Model.Database
                 AuthorId = dto.AuthorId,
                 Name = dto.Name,
                 Description = dto.Description,
-                ImageUrl = dto.ImageUrl
+                ImageUrl = dto.ImageUrl,
+                Private = dto.Private
             };
         }
     }

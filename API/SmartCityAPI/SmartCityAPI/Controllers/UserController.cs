@@ -74,7 +74,10 @@ namespace SmartCityAPI.Controllers
 
             foreach (SubscriptionDTO subscription in subscriptions)
             {
-                networks.Add(await _networkDAO.FindById(subscription.Id));
+                if (subscription.State == "accepted")
+                {
+                    networks.Add(await _networkDAO.FindById(subscription.NetworkId));
+                }
             }
 
             return new OkObjectResult(networks);
