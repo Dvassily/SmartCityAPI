@@ -103,3 +103,16 @@ C:\Users\dalie\Source\Repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\
 C:\Users\dalie\Source\Repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\bin\Test\netcoreapp3.1\Microsoft.Azure.Storage.Blob.dll
 C:\Users\dalie\Source\Repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\bin\Test\netcoreapp3.1\Microsoft.Azure.Storage.Common.dll
 C:\Users\dalie\Source\Repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\bin\Test\netcoreapp3.1\Microsoft.WindowsAzure.Storage.dll
+C:\Users\dalie\source\repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\bin\Test\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\dalie\source\repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\bin\Test\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\dalie\source\repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\bin\Test\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\dalie\source\repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\bin\Test\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\dalie\source\repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\bin\Test\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\dalie\source\repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\bin\Test\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\dalie\source\repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\bin\Test\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\dalie\source\repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\bin\Test\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\dalie\source\repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\bin\Test\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\dalie\source\repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\bin\Test\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\dalie\source\repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\bin\Test\netcoreapp3.1\System.IO.Pipelines.dll
+C:\Users\dalie\source\repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\bin\Test\netcoreapp3.1\Protocol.dll
+C:\Users\dalie\source\repos\Dvassily\SmartCityAPI\API\SmartCityAPI\SmartCityAPI\bin\Test\netcoreapp3.1\Protocol.pdb

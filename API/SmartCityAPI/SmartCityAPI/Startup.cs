@@ -43,6 +43,8 @@ namespace SmartCityAPI
             services.AddTransient<ICounterDAO, CounterDAO>();
             services.AddTransient<ITradeTypeContext, TradeTypeContext>();
             services.AddTransient<ITradeTypeDAO, TradeTypeDAO>();
+            services.AddTransient<ITradeContext, TradeContext>();
+            services.AddTransient<ITradeDAO, TradeDAO>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -28,5 +28,8 @@ namespace Model.Database
 
         [BsonElement("users")]
         public int Users { get; set; }
+
+        [BsonElement("trades")]
+        public int Trades { get; set; }
     }
 }

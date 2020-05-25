@@ -17,7 +17,7 @@ namespace SmartCityAPI.DAO
 {
     public class NetworkDAO : INetworkDAO
     {
-        private readonly INetworkContext _context; 
+        private readonly INetworkContext _context;
         private readonly ICounterDAO _counterDAO;
         private readonly ISubscriptionDAO _subscriptionDAO;
         private readonly IUserDAO _userDAO;
