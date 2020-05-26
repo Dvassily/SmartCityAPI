@@ -31,5 +31,8 @@ namespace Model.Database
 
         [BsonElement("trades")]
         public int Trades { get; set; }
+
+        [BsonElement("offers")]
+        public int Offers { get; set; }
     }
 }
