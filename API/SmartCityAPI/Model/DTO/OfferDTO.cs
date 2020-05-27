@@ -23,13 +23,18 @@ namespace Model.DTO
         [JsonProperty("image_url")]
         public string ImageUrl { get; set; }
 
+        [JsonProperty("target")]
+        public List<int> Target { get; set; } = new List<int>();
+
         public static OfferDTO FromOffer(Offer offer)
             => new OfferDTO
             {
                 Id = offer.Id,
+                TradeId = offer.TradeId,
                 Title = offer.Title,
                 Description = offer.Description,
-                ImageUrl = offer.ImageUrl
+                ImageUrl = offer.ImageUrl,
+                Target = offer.Target
             };
     }
 }

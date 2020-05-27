@@ -12,5 +12,7 @@ namespace SmartCityAPI.DAO
         Task<List<OfferDTO>> FindOffersByTrade(int tradeId);
 
         Task<OfferDTO> Insert(OfferDTO offer);
+
+        Task<List<OfferDTO>> FindAll();
     }
 }

@@ -27,13 +27,18 @@ namespace Model.Database
         [BsonElement("image_url")]
         public string ImageUrl { get; set; }
 
+        [BsonElement("target")]
+        public List<int> Target { get; set; } = new List<int>();
+
         public static Offer FromDTO(OfferDTO offer)
             => new Offer
             {
                 Id = offer.Id,
+                TradeId = offer.TradeId,
                 Title = offer.Title,
                 Description = offer.Description,
-                ImageUrl = offer.ImageUrl
+                ImageUrl = offer.ImageUrl,
+                Target = offer.Target
             };
     }
 }

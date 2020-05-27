@@ -48,5 +48,20 @@ namespace SmartCityAPI.DAO
 
             return OfferDTO.FromOffer(offer);
         }
+
+        public async Task<List<OfferDTO>> FindAll()
+        {
+            IEnumerable<Offer> offers = await _context.Offers.Find(_ => true).ToListAsync();
+            List<OfferDTO> result = new List<OfferDTO>();
+
+            foreach (Offer offer in offers)
+            {
+                OfferDTO dto = OfferDTO.FromOffer(offer);
+
+                result.Add(dto);
+            }
+
+            return result;
+        }
     }
 }
